@@ -1,0 +1,7 @@
+   0 cd /
+   1 echo "Start" >> file.txt
+   2 date >> file.txt
+   3 mkdir -p /opt/task
+   4 cp /file.txt /opt/task/start.txt
+   5 ls | tail -4 >> /opt/task/start.txt
+   6 history > /tmp/history.txt

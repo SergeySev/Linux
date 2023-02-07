@@ -1,3 +1,5 @@
+-- Project - online game
+
 create table items (
     id int auto_increment primary key,
     cost int,

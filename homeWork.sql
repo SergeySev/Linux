@@ -78,3 +78,27 @@ create table if not exists avatars_link (
 user_id int not null,
 link text not null,
 foreign key (user_id) references users(id));
+
+ALTER TABLE `online_chat`.`avatar_link` 
+ADD COLUMN `id` INT NOT NULL AUTO_INCREMENT AFTER `link`,
+ADD PRIMARY KEY (`id`);
+;
+
+ALTER TABLE `online_chat`.`documents_link` 
+ADD COLUMN `id` INT NOT NULL AUTO_INCREMENT AFTER `link`,
+ADD PRIMARY KEY (`id`);
+;
+
+ALTER TABLE `online_chat`.`photos_link` 
+ADD COLUMN `id` INT NOT NULL AUTO_INCREMENT AFTER `link`,
+ADD PRIMARY KEY (`id`);
+;
+
+ALTER TABLE `online_chat`.`video_link` 
+ADD COLUMN `id` INT NOT NULL AUTO_INCREMENT AFTER `link`,
+ADD PRIMARY KEY (`id`);
+;
+
+
+ALTER TABLE `online_chat`.`massages` 
+ADD COLUMN `time` DATETIME DEFAULT CURRENT_TIMESTAMP;

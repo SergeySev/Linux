@@ -9,7 +9,7 @@ select users.fullname, sum(amount) as sum
 from donations 
 left join users
 on  donations.donator_id=users.user_id
-group by users.fullname
+group by users.user_id
 order by sum desc 
 limit 1
 
@@ -23,7 +23,7 @@ select users.fullname, sum(amount) as sum
 from donations 
 left join users
 on  donations.stream_id=users.user_id
-group by users.fullname
+group by users.user_id
 order by sum desc 
 limit 3
 
